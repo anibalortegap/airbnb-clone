@@ -1,6 +1,11 @@
 import React from 'react';
-import { HomePage } from './pages/Home';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes } from './pages/Routes';
 
 export const App = () => {
-  return <HomePage />;
+  return (
+    <Router>
+      <Routes />
+    </Router>
+  );
 };
