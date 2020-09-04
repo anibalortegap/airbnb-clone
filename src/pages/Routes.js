@@ -9,9 +9,9 @@ export const Routes = () => (
     <Route path='/' exact>
       <HomePage />
     </Route>
-    <Route path='/detail'>
+    <Route path='/detail/:id'>
       <DetailPage />
     </Route>
-    <Route path='/booking' component={BookingPage} />
+    <Route path='/booking/:id' component={BookingPage} />
   </Switch>
 );
