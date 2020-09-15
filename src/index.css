@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,900&display=swap');
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -101,4 +112,53 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+.housing {
+  display: flex;
+  border: 1px solid #f2f2f2;
+  box-shadow: 1px 2px 2px #cccccc;
+  margin: 10px 0px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.housing img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.housing div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.housing h3 {
+  margin: 0px;
+  font-weight: 300;
+}
+
+.housing h6 {
+  margin: 0px;
+}
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.score div {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.score div i {
+  color: #00a699;
+}
+
+.score p {
+  padding: 0;
+  margin: 0 10px;
 }
