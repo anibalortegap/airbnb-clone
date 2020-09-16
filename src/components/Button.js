@@ -7,13 +7,16 @@ export const Button = ({
   isLink = false,
   linkTo = '/',
   style = {},
+  disabled = false,
 }) =>
   isLink ? (
-    <Link className='button' style={style} to={linkTo}>
-      {label}
+    <Link to={linkTo}>
+      <button disabled={disabled} style={style} type={type} className='button'>
+        {label}
+      </button>
     </Link>
   ) : (
-    <button style={style} type={type} className='button'>
+    <button disabled={disabled} style={style} type={type} className='button'>
       {label}
     </button>
   );

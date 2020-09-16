@@ -1,14 +1,14 @@
 import React from 'react';
 
-const StarFill = () => <i class='material-icons'>star</i>;
+const StarFill = () => <i className='material-icons'>star</i>;
 
-const StarOutline = () => <i class='material-icons'>star_outline</i>;
+const StarOutline = () => <i className='material-icons'>star_outline</i>;
 
 export const Score = ({ score = 0, users = 0 }) => (
   <section className='score'>
     <div>
-      {[1, 2, 3, 4, 5].map((item) =>
-        item <= score ? <StarFill /> : <StarOutline />,
+      {[1, 2, 3, 4, 5].map((item, i) =>
+        item <= score ? <StarFill key={i} /> : <StarOutline key={i} />,
       )}
     </div>
     <p>{users}</p>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card } from './Card';
 
 const posts = [
@@ -38,20 +38,33 @@ const posts = [
   },
 ];
 
-export const Ranking = () => (
-  <section className='ranking'>
-    {posts.map((item) => (
-      <Card key={item.id} {...item} />
-    ))}
+export const Ranking = () => {
+  useEffect(() => {
+    console.log('Initial');
+    const userRequest = async () => {
+      let response = await fetch('https://api.mocki.io/v1/b043df5a');
+      let data = await response.json();
+      console.log(data);
+      return data;
+    };
+    userRequest();
+  }, []);
 
-    {posts.map((item, i) => (
-      <Card
-        key={i}
-        id={item.id}
-        image={item.image}
-        description={item.description}
-        place={item.place}
-      />
-    ))}
-  </section>
-);
+  return (
+    <section className='ranking'>
+      {posts.map((item) => (
+        <Card key={item.id} {...item} />
+      ))}
+
+      {posts.map((item, i) => (
+        <Card
+          key={i}
+          id={item.id}
+          image={item.image}
+          description={item.description}
+          place={item.place}
+        />
+      ))}
+    </section>
+  );
+};

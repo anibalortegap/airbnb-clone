@@ -12,7 +12,8 @@ const buttonStyle = {
 };
 
 export const DetailPage = () => {
-  const { id } = useParams;
+  const { id } = useParams();
+  console.log(id);
   return (
     <FramePage>
       <Title label={'Parapente Chicamocha'} />
