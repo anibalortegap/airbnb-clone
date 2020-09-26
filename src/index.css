@@ -93,6 +93,12 @@ body {
 
 .button:hover {
   opacity: 1;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  cursor: no-drop;
 }
 
 .button:focus {
@@ -101,4 +107,83 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+.housing {
+  display: flex;
+  border: 1px solid #f2f2f2;
+  box-shadow: 1px 2px 2px #cccccc;
+  margin: 10px 0px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.housing img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.housing div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.housing h3 {
+  margin: 0px;
+  font-weight: 300;
+}
+
+.housing h6 {
+  margin: 0px;
+}
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.score div {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.score div i {
+  color: #00a699;
+}
+
+.score p {
+  padding: 0;
+  margin: 0 10px;
+}
+
+.booking-form {
+  margin: 15px 0px;
+}
+.booking-form div {
+  border: 1px solid #cccccc;
+  background: #f2f2f2;
+  border-radius: 4px;
+  margin: 10px 0px;
+  padding: 0 10px;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 5px;
+  font-weight: 300px;
+  outline: none;
+  font-size: 1em;
+  background: transparent;
+  border: none;
+  margin: 3px 0;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  color: #767676;
+}
+
+.booking-form label {
+  color: #777777;
+  font-size: 0.95em;
 }
