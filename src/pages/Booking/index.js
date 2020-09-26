@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FramePage } from './../FramePage';
 import { Button } from './../../components/Button';
 import { useParams } from 'react-router-dom';
+import { requestHttp } from '../../config/HttpRequest';
 
 export const BookingPage = () => {
   const { id } = useParams();
@@ -17,15 +18,21 @@ export const BookingPage = () => {
     requestBooking();
   };
 
-  const requestBooking = () => {
-    const data = {
-      id,
-      name,
-      phone,
-      email,
-      bookingDate,
-    };
-    console.log(data);
+  const requestBooking = async () => {
+    try {
+      const data = {
+        id,
+        name,
+        phone,
+        email,
+        bookingDate,
+      };
+      const request = await requestHttp('post', '/booking/', data);
+      console.log(request);
+      alert('Booking successful');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
